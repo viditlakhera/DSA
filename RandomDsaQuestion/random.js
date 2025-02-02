@@ -20,3 +20,31 @@ let sort = a.sort((a,b) => b - a);
    return acc * value
 },1);
 console.log(product);
+
+//Maximum consecutive one’s in a binary array-------------------
+let arr = [1,0,0,1,1,0,1,0, 0 ,0 , 1,1,1,1,1,0,1,11,1,1,1,1,1,1];
+
+let flag = false 
+let max = 0;
+let comparitivemax = 0;
+
+for( let i=0; i<arr.length; i++){
+    if( arr[i] == 1){
+        flag = true
+        comparitivemax++
+    }else{
+        flag = false;
+        if(comparitivemax > max || (max == 0 && comparitivemax ==0) ){
+            max = comparitivemax;
+        }
+        comparitivemax = 0;
+    }
+    if( i == (arr.length - 1) && comparitivemax > max){
+        max = comparitivemax;
+        comparitivemax = 0;
+    }
+}
+
+console.log( max)
+
+

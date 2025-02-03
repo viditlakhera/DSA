@@ -21,7 +21,7 @@ let sort = a.sort((a,b) => b - a);
 },1);
 console.log(product);
 
-//Maximum consecutive one’s in a binary array-------------------
+//Maximum consecutive one’s in a binary array----------------------------------------------------------------
 let arr = [1,0,0,1,1,0,1,0, 0 ,0 , 1,1,1,1,1,0,1,11,1,1,1,1,1,1];
 
 let flag = false 
@@ -45,6 +45,23 @@ for( let i=0; i<arr.length; i++){
     }
 }
 
-console.log( max)
+// console.log( max)
 
 
+
+//Move all zeros to the end of arrays -----------------------------------------------------------------------
+let zeros = [0,0,23,23,1,0,33,2,1,77,90,10,0,0,5];
+
+for(let i = 0; i< zeros.length; i++){
+    if( zeros[i] == 0){
+        let temp = zeros[i];
+        for( let j= i; j<zeros.length;j++){
+           zeros[j] = zeros[j+1] 
+           if(j == zeros.length - 1){
+            zeros[zeros.length - 1] = temp
+           }  
+        }
+    }
+}
+
+console.log(zeros);

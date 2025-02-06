@@ -65,3 +65,20 @@ for(let i = 0; i< zeros.length; i++){
 }
 
 console.log(zeros);
+
+
+//pallindrome
+
+let ispallindrome = 'cvaavcs';
+function ispallindrom(){
+    let Maximum = Math.floor(ispallindrome.length/2);
+    for( let i =0 ; i<Maximum; i++){
+        if(ispallindrome[i] != ispallindrome[(ispallindrome.length - 1) -i]){
+            return console.log('not pallindrome')
+        }
+    }
+    
+   return console.log('pallindrome')
+}
+
+ispallindrom(ispallindrome);

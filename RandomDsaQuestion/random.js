@@ -105,4 +105,4 @@ for( let i =0; i< firstword.length; i++){
 return 'anagram'
 }
 
-console.log(checkanagram(firstword,secondword))
+checkanagram(firstword,secondword)

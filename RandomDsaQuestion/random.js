@@ -82,3 +82,27 @@ function ispallindrom(){
 }
 
 ispallindrom(ispallindrome);
+
+
+// anagram
+
+let firstword = 'sweet';
+let secondword = 'tesewk';
+
+function checkanagram(firstword,secondword){
+if( firstword.length != secondword.length){
+    return 'not anagram'
+}
+let newf = firstword.split('').sort()
+let news = secondword.split('').sort()
+console.log(newf,news)
+for( let i =0; i< firstword.length; i++){
+    if(news[i] != newf[i]){
+        return 'not anagram'
+    }
+}
+
+return 'anagram'
+}
+
+console.log(checkanagram(firstword,secondword))

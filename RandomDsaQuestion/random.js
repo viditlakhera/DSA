@@ -19,7 +19,7 @@ let sort = a.sort((a,b) => b - a);
  let product = a.slice(0,3).reduce((acc,value,i) => {
    return acc * value
 },1);
-console.log(product);
+// console.log(product);
 
 //Maximum consecutive one’s in a binary array----------------------------------------------------------------
 let arr = [1,0,0,1,1,0,1,0, 0 ,0 , 1,1,1,1,1,0,1,11,1,1,1,1,1,1];
@@ -64,7 +64,7 @@ for(let i = 0; i< zeros.length; i++){
     }
 }
 
-console.log(zeros);
+// console.log(zeros);
 
 
 //pallindrome
@@ -81,7 +81,7 @@ function ispallindrom(){
    return console.log('pallindrome')
 }
 
-ispallindrom(ispallindrome);
+// ispallindrom(ispallindrome);
 
 
 // anagram
@@ -105,4 +105,24 @@ for( let i =0; i< firstword.length; i++){
 return 'anagram'
 }
 
-checkanagram(firstword,secondword);
+// checkanagram(firstword,secondword);
+
+
+// find first missing number in array 
+
+let missing = [1,3,4,5];
+let initial = missing[0];
+function missingnumber(missing,initial){
+    if(missingnumber.length == 0){
+        return 'empty array'
+    }
+    for( let i=0; i< missing.length; i++){
+       if(initial != missing[i]){
+        return initial
+       }
+       initial++;
+    }
+
+    return 'no number is missing'
+}
+console.log(missingnumber(missing,initial))

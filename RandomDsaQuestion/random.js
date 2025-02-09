@@ -125,4 +125,36 @@ function missingnumber(missing,initial){
 
     return 'no number is missing'
 }
-console.log(missingnumber(missing,initial))
+// console.log(missingnumber(missing,initial))
+
+
+let json = { 
+    "shipped": [ { "orderId": 1, "status": "shipped", "amount": 100 }, { "orderId": 3, "status": "shipped", "amount": 200 } ],
+"pending": [ { "orderId": 2, "status": "pending", "amount": 50 } ], 
+"canceled": [ { "orderId": 4, "status": "canceled", "amount": 30 } ]
+ }
+
+
+ function tofind(json,orderid,key){
+  let value = json[key];
+
+  if(!value){
+    return 'no key is present on json with ' + key + ' name';
+  }
+  let data = {};
+  let amount = 0;
+  for( let i =0; i<value.length; i++){
+    if( value[i].orderId == orderid){
+        data = {
+            status : value[i].status,
+            amount: value[i].amount
+        }
+    }
+    amount+= value[i].amount
+  }
+   
+  data['totalamount'] = amount
+  return data;
+ }
+
+ console.log(tofind(json,3,"canceled"));

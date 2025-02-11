@@ -157,4 +157,28 @@ let json = {
   return data;
  }
 
- console.log(tofind(json,3,"canceled"))
+ console.log(tofind(json,3,"canceled"));
+
+ //find duplicate------------
+
+ let duplicatearray = [2,1,33,44,2,1,0,0,6,8,7,9,8];
+
+ function duplicate(array){
+   let data = {};
+   let duplicate = [];
+   for( let i =0; i<array.length;i++){
+    if( data[array[i]]){
+        data[array[i]] = data[array[i]] + 1
+    }else{
+        data[array[i]] = 1
+    }
+   }
+   for( let ele in data){
+    if(data[ele] > 1 ){
+      duplicate.push(ele)
+    }
+   }
+   return duplicate;
+ }
+
+ console.log(duplicate(duplicatearray));

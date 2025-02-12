@@ -182,3 +182,17 @@ let json = {
  }
 
  console.log(duplicate(duplicatearray));
+
+
+ //Maximum product of a triplet (subsequence of size 3) in array
+let maximumthree = [22,33,22,11,2];
+let count = 3;
+function maximumthreeproduct(maximumthree, count){
+    let sorted = maximumthree.sort((a,b) => b-a)
+    let product = 1;
+    for ( let i=0; i< count; i++){
+       product *=sorted[i]
+    }
+return product
+}
+ console.log(maximumthreeproduct(maximumthree, count));

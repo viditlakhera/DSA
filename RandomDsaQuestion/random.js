@@ -196,3 +196,16 @@ function maximumthreeproduct(maximumthree, count){
 return product
 }
  console.log(maximumthreeproduct(maximumthree, count));
+
+ //reverse a string;
+
+ let str = 'abcd fa';
+ function toreverse(str){
+   if( str.length == 0){
+    return 'empty string';
+   }
+    let sr = str.split('').reverse().join('');
+   return sr;
+ }
+
+ console.log(toreverse(str))

@@ -199,7 +199,7 @@ return product
 
  //reverse a string;
 
- let str = 'abcd fa';
+ let str = 'hello';
  function toreverse(str){
    if( str.length == 0){
     return 'empty string';
@@ -208,4 +208,27 @@ return product
    return sr;
  }
 
- console.log(toreverse(str))
+//  console.log(toreverse(str));
+
+
+ function toreversewithoutinbuilt(str){
+   let newstring = '';
+   for(let i = str.length - 1; i>=0; i--){
+    newstring += str[i];
+   }
+
+   return newstring
+ }
+
+ console.log(toreversewithoutinbuilt('hello world'));
+
+
+ function replacechar(str,index,char){
+    let newstring = '';
+    for( let i= 0; i< str.length; i++){
+      i== index ? newstring+=char: newstring+=str[i]
+    }
+    return newstring;
+ }
+
+ console.log(replacechar(str,1,'k'))

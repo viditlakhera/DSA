@@ -232,3 +232,7 @@ return product
  }
 
  console.log(replacechar(str,1,'k'))
+
+ //---------------------------------------
+
+ 

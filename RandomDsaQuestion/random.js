@@ -231,8 +231,13 @@ return product
     return newstring;
  }
 
- console.log(replacechar(str,1,'k'))
+//  console.log(replacechar(str,1,'k'))
 
  //---------------------------------------
 
- 
+ //timer based event priorty checking
+ console.log('aa');
+setTimeout(()=> console.log("timeout"));
+// setInterval(()=> console.log('ssss'), 2000);
+clearInterval();
+process.nextTick(()=>console.log("fffff"));

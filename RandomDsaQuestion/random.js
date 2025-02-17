@@ -241,3 +241,8 @@ setTimeout(()=> console.log("timeout"));
 // setInterval(()=> console.log('ssss'), 2000);
 clearInterval();
 process.nextTick(()=>console.log("fffff"));
+
+//------------------------------------sort
+
+let unsort = [22,33,1,22,335];
+console.log(unsort.sort((a,b) => a - b));

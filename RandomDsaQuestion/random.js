@@ -246,3 +246,7 @@ process.nextTick(()=>console.log("fffff"));
 
 let unsort = [22,33,1,22,335];
 console.log(unsort.sort((a,b) => a - b));
+
+//------------------------------------reverse
+
+console.log(unsort.reverse());

@@ -237,10 +237,10 @@ return product
 
  //timer based event priorty checking
  console.log('aa');
-setTimeout(()=> console.log("timeout"));
+// setTimeout(()=> console.log("timeout"));
 // setInterval(()=> console.log('ssss'), 2000);
-clearInterval();
-process.nextTick(()=>console.log("fffff"));
+// clearInterval();
+// process.nextTick(()=>console.log("fffff"));
 
 //------------------------------------sort
 
@@ -249,4 +249,22 @@ console.log(unsort.sort((a,b) => a - b));
 
 //------------------------------------reverse
 
-console.log(unsort.reverse());
+console.log(unsort.reverse())
+
+//------------repeated ele in array-----
+
+let repeated = [1,2,2,3,5,6,77,4,77]
+let obj = {};
+for( let i = 0; i< repeated.length; i++){
+if(obj[repeated[i]]){
+    obj[repeated[i]] = obj[repeated[i]] + 1
+}else{
+    obj[repeated[i]] = 1
+}
+}
+let repeatednumber = []
+for( let ele in obj){
+    obj[ele] > 1 ? repeatednumber.push(Number(ele)): '';
+}
+
+console.log(repeatednumber)

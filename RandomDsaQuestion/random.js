@@ -267,4 +267,4 @@ for( let ele in obj){
     obj[ele] > 1 ? repeatednumber.push(Number(ele)): '';
 }
 
-console.log(repeatednumber)
+// console.log(repeatednumber)

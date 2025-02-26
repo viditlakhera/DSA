@@ -268,3 +268,14 @@ for( let ele in obj){
 }
 
 console.log(repeatednumber)
+
+
+//-----------swap two number in single line 
+
+let first = 2, second= 3;
+
+// first = first + second - ( second = first); // first way
+[first,second]= [second,first]
+console.log( first,second);
+
+

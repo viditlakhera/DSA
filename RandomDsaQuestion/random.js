@@ -276,6 +276,6 @@ let first = 2, second= 3;
 
 // first = first + second - ( second = first); // first way
 [first,second]= [second,first]
-console.log( first,second);
+// console.log( first,second);
 
 
